@@ -1,0 +1,36 @@
+.heroElementYTCleaner {
+  z-index: 1000;
+  position: fixed;
+  background-color: var(--yt-spec-base-background);
+  height: 100vh;
+  width: 100vw;
+  top: 60px;
+  left: 75px;
+}
+
+.homeheroElementYTCleaner {
+  height: 100vh;
+  width: 100vw;
+  top: 60px;
+  left: 75px;
+}
+
+.watchheroElementYTCleaner {
+  height: 100vh !important;
+  width: 34vw !important;
+  top: 55px !important;
+  right: 0px !important;
+  left: unset !important;
+}
+
+.shortsheroElementYTCleaner {
+  height: 100vh;
+  width: 100vw;
+  top: 60px;
+  left: 75px;
+}
+
+.noheroElementYTCleaner {
+  display: none !important;
+  z-index: 1 !important;
+}

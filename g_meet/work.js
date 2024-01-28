@@ -1,11 +1,5 @@
-let botON = false;
-let chatOpen;
-let chatInput;
-let sendBtn;
-let sidebar;
-let participants;
-let participantsList;
-let messageList;
+let botON = false, participantsList, messageList;
+let chatOpen, chatInput, sendBtn, sidebar, participants;
 const commands = `"reply[message]": [message],
 "info[name]": [name]'s info, 
 "time": time,
