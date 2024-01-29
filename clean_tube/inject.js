@@ -7,6 +7,16 @@ const progressElementName = "yt-page-navigation-progress";
 const heroElementClassName = "heroElementYTCleaner";
 let heroElement;
 
+function handleFullScreen() {
+  const path = window.location.pathname;
+  if (path != "/watch") return;
+  if (document.fullscreenElement) {
+    heroElement.classList.add("no" + heroElementClassName);
+  } else {
+    heroElement.classList.remove("no" + heroElementClassName);
+  }
+}
+
 function handlePathChange() {
   const path = window.location.pathname;
   heroElement.className = heroElementClassName;
@@ -36,6 +46,7 @@ function init() {
   }
   observeMutations(progressElement);
   handlePathChange();
+  document.addEventListener("fullscreenchange", handleFullScreen);
 }
 
 heroElement = document.createElement("div");
