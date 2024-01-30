@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Element hider",
-    "discription": "Hide unwanted Elements from websites",
+    "description": "Hide unwanted Elements from websites",
     "version": "1.0",
     "permissions": ["activeTab", "contextMenus"],
     "background": {
