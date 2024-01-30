@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Clean up YouTube",
-  "description": "Clean up youtube from distractions",
+  "name": "Focus Tube",
+  "description": "Focus mode for youtube",
   "version": "1",
   "content_scripts": [
     {
@@ -11,9 +11,9 @@
     }
   ],
   "icons": {
-    "16": "icon-16x16.png",
-    "32": "icon-32x32.png",
-    "48": "icon-48x48.png",
-    "128": "icon-128x128.png"
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
 }

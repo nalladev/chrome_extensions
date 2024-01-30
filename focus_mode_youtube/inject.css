@@ -1,0 +1,36 @@
+#related,
+#chip-bar,
+#chips-content,
+#shorts-inner-container,
+.focus-tube-home #contents,
+ytd-reel-shelf-renderer,
+ytd-rich-shelf-renderer,
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+yt-tab-shape[tab-title="Shorts"],
+ytd-guide-entry-renderer:nth-child(2),
+ytd-guide-section-renderer:nth-child(3),
+ytd-guide-section-renderer:nth-child(4) {
+  display: none !important;
+}
+
+#author-thumbnail {
+  z-index: -1 !important;
+}
+
+.focus-tube-home div#center {
+  position: fixed;
+  top: 25vh;
+  left: 25vw;
+  height: 7vh;
+  width: 50vw;
+}
+
+.focus-tube-home form#search-form, .focus-tube-home button#search-icon-legacy {
+  height: 7vh !important;
+}
+
+.focus-tube-home ytd-topbar-logo-renderer#logo {
+  position: fixed;
+  top: 10px;
+  left: 45vw;
+}
