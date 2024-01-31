@@ -1,7 +1,7 @@
 const progressElementName = "yt-page-navigation-progress";
 const searchElementName = "search_query";
 const className = "focus-tube-home";
-let timeout;
+let pathHandled = false;
 
 function handlePathChange() {
   const path = window.location.pathname;
@@ -14,9 +14,11 @@ function handlePathChange() {
 
 function observeMutations(progressElement) {
   const observer = new MutationObserver(() => {
-    if (!progressElement.hidden) {
-      if (timeout) clearTimeout(timeout);
-      timeout = setTimeout(handlePathChange, 50)
+    if (!pathHandled && !progressElement.hidden) {
+      handlePathChange();
+      pathHandled = true;
+    } else if (progressElement.hidden) {
+      pathHandled = false;
     }
   });
   observer.observe(progressElement, { attributes: true, subtree: false });
@@ -44,6 +46,7 @@ function init() {
   handlePathChange();
   handleSearchLoad();
   handlePageLoad();
+  window.addEventListener("popstate", handlePathChange);
 }
 
 init();
