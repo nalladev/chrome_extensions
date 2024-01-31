@@ -43,10 +43,10 @@ function handleSearchLoad() {
 }
 
 function init() {
+  window.addEventListener("popstate", handlePathChange);
   handlePathChange();
   handleSearchLoad();
   handlePageLoad();
-  window.addEventListener("popstate", handlePathChange);
 }
 
 init();
