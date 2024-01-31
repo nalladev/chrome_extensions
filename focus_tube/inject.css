@@ -7,7 +7,10 @@ ytd-reel-shelf-renderer,
 ytd-rich-shelf-renderer,
 ytd-mini-guide-entry-renderer[aria-label="Shorts"],
 yt-tab-shape[tab-title="Shorts"],
-ytd-guide-entry-renderer:nth-child(2),
+ytd-guide-section-renderer:first-child ytd-guide-entry-renderer:nth-child(2),
+ytd-guide-section-renderer:nth-child(2)
+  ytd-guide-collapsible-entry-renderer
+  ytd-guide-entry-renderer:last-child,
 ytd-guide-section-renderer:nth-child(3),
 ytd-guide-section-renderer:nth-child(4) {
   display: none !important;
@@ -25,7 +28,8 @@ ytd-guide-section-renderer:nth-child(4) {
   width: 50vw;
 }
 
-.focus-tube-home form#search-form, .focus-tube-home button#search-icon-legacy {
+.focus-tube-home form#search-form,
+.focus-tube-home button#search-icon-legacy {
   height: 7vh !important;
 }
 

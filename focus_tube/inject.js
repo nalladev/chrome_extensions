@@ -12,25 +12,29 @@ function handlePathChange() {
   }
 }
 
-function observeMutations(progressElement) {
-  const observer = new MutationObserver((mutations) => {
-    console.log(mutations);
-    if (!progressElement.hidden) {
-      handlePathChange();
-    }
+function observeMutations(element) {
+  const observer = new MutationObserver(handlePathChange);
+  observer.observe(element, {
+    childList: true,
   });
-  observer.observe(progressElement, {
-    attributeFilter: ["hidden"],
-  });
+
+  // const observer = new MutationObserver((mutations) => {
+  //   if (!element.hidden) {
+  //     handlePathChange();
+  //   }
+  // });
+  // observer.observe(element, {
+  //   attributeFilter: ["hidden"],
+  // });
 }
 
 function handlePageLoad() {
-  const progressElement = document.getElementsByTagName(progressElementName)[0];
-  if (!progressElement) {
+  const titleElement = document.getElementsByTagName("title")[0];
+  if (!titleElement) {
     setTimeout(handlePageLoad, 500);
     return;
   }
-  observeMutations(progressElement);
+  observeMutations(titleElement);
 }
 
 function handleSearchLoad() {
@@ -43,7 +47,7 @@ function handleSearchLoad() {
 }
 
 function init() {
-  window.addEventListener("popstate", handlePathChange);
+  // window.addEventListener("popstate", handlePathChange);
   handlePathChange();
   handleSearchLoad();
   handlePageLoad();
