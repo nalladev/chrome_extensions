@@ -4,7 +4,6 @@ const className = "focus-tube-home";
 
 function handlePathChange() {
   const path = window.location.pathname;
-  console.log(path);
   if (path == "/") {
     document.body.classList.add(className);
   } else {
