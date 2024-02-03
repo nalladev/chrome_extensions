@@ -12,7 +12,9 @@ ytd-guide-section-renderer:nth-child(2)
   ytd-guide-collapsible-entry-renderer
   ytd-guide-entry-renderer:last-child,
 ytd-guide-section-renderer:nth-child(3),
-ytd-guide-section-renderer:nth-child(4) {
+ytd-guide-section-renderer:nth-child(4),
+.focus-tube-home #search-button-narrow.ytd-masthead,
+.focus-tube-home div#home-container-skeleton {
   display: none !important;
 }
 
@@ -23,18 +25,57 @@ ytd-guide-section-renderer:nth-child(4) {
 .focus-tube-home div#center {
   position: fixed;
   top: 25vh;
-  left: 25vw;
-  height: 7vh;
-  width: 50vw;
+  left: 30vw;
+  height: 50px;
+  width: 40vw;
+}
+
+.focus-tube-home ytd-searchbox#search,
+.focus-tube-home form#search-form div#container {
+  margin: 0px !important;
+  display: flex !important;
 }
 
 .focus-tube-home form#search-form,
 .focus-tube-home button#search-icon-legacy {
-  height: 7vh !important;
+  height: 50px !important;
 }
 
 .focus-tube-home ytd-topbar-logo-renderer#logo {
   position: fixed;
-  top: 10px;
-  left: 45vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (width <= 1200px) {
+  .focus-tube-home div#center {
+    left: 25vw;
+    width: 50vw;
+  }
+}
+
+@media (width <= 900px) {
+  .focus-tube-home div#center {
+    left: 20vw;
+    width: 60vw;
+  }
+}
+
+@media (width <= 700px) {
+  .focus-tube-home div#center {
+    left: 10vw;
+    width: 80vw;
+  }
+  .focus-tube-home ytd-topbar-logo-renderer#logo {
+    position: initial;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+}
+
+@media (width <= 500px) {
+  .focus-tube-home #voice-search-button.ytd-masthead {
+    display: none !important;
+  }
 }
