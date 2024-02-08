@@ -1,25 +1,43 @@
-#related,
+/* search/other page styles */
+
 #chip-bar,
-.focus-tube-home #chips-content,
-#shorts-inner-container,
-.focus-tube-home #contents,
+div.yt-tab-group-shape-wiz__slider,
+ytd-browse[page-subtype="hashtag-landing-page"],
+ytd-browse[page-subtype="audio-pivot"],
 ytd-reel-shelf-renderer,
 ytd-rich-shelf-renderer,
+yt-tab-shape[tab-title="Shorts"] {
+  display: none !important;
+}
+
+.yt-tab-shape-wiz[aria-selected="true"] .yt-tab-shape-wiz__tab-bar {
+  background-color: #f1f1f1 !important;
+  border-radius: 1px;
+  height: 2px !important;
+}
+
+/* watch/shorts page styles */
+
+#related,
+#pivot-button,
+#author-thumbnail {
+  display: none !important;
+}
+
+/* home page styles */
+
+.focus-tube-home #contents,
+.focus-tube-home #chips-content,
+.focus-tube-home #search-button-narrow.ytd-masthead,
+.focus-tube-home div#home-container-skeleton,
 ytd-mini-guide-entry-renderer[aria-label="Shorts"],
-yt-tab-shape[tab-title="Shorts"],
 ytd-guide-section-renderer:first-child ytd-guide-entry-renderer:nth-child(2),
 ytd-guide-section-renderer:nth-child(2)
   ytd-guide-collapsible-entry-renderer
   ytd-guide-entry-renderer:last-child,
 ytd-guide-section-renderer:nth-child(3),
-ytd-guide-section-renderer:nth-child(4),
-.focus-tube-home #search-button-narrow.ytd-masthead,
-.focus-tube-home div#home-container-skeleton {
+ytd-guide-section-renderer:nth-child(4) {
   display: none !important;
-}
-
-#author-thumbnail {
-  z-index: -1 !important;
 }
 
 .focus-tube-home div#center {
