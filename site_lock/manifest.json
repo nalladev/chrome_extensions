@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Site lock",
+  "description": "Lock sites",
+  "version": "1",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.twitter.com/*",
+        "*://*.goku.sx/*",
+        "*://*.telegram.org/*",
+        "*://*.goku.watch/*"
+      ],
+      "js": ["inject.js"],
+      "css": ["inject.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
