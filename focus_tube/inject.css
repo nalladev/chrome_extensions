@@ -20,7 +20,10 @@ yt-tab-shape[tab-title="Shorts"] {
 
 #related,
 #pivot-button,
-#author-thumbnail {
+#author-thumbnail,
+.html5-endscreen,
+.ytp-ce-video,
+.ytp-ce-playlist {
   display: none !important;
 }
 
@@ -40,7 +43,9 @@ ytd-guide-section-renderer:nth-child(4) {
   display: none !important;
 }
 
-.focus-tube-home div#center {
+/* search customization styles */
+
+/* .focus-tube-home div#center {
   position: fixed;
   top: 25vh;
   left: 30vw;
@@ -96,4 +101,4 @@ ytd-guide-section-renderer:nth-child(4) {
   .focus-tube-home #voice-search-button.ytd-masthead {
     display: none !important;
   }
-}
+} */
